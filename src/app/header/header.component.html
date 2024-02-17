@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li class="list-item  mt-2"style="margin:10px">
+                <i class="fa fa-bars fa-2x"(click)="show()"></i>
+            </li>
+
+            <li class="list-item">
+                <a routerLink="/employee/myprofile" routerLinkActive="active">MyProfile<span> <i class="fa fa-caret-down" (click)="onOptionSelected()"></i></span>
+                    <div *ngIf="selectedOption" class="dropdown-options">
+                        <div *ngFor="let option of dropdownOptions" (click)="selectOption(option)">
+                          {{ option }}
+                        </div>
+                      </div>
+
+                </a>
+
+            </li>
+
+            <li class="list-item">
+                <a routerLink="/employee/viewtask" routerLinkActive="active">ViewTasks</a>
+            </li >
+
+            <li class="list-item">
+                <a routerLink="/employee/taskhistory" routerLinkActive="active">TaskHistory</a>
+            </li>
+
+            <li class="list-item">
+                <a routerLink="/employee/taskanalytics" routerLinkActive="active">TaskAnalytics</a>
+            </li>
+            <button class="btn btn-danger mt-2"(click)="logout()">Logout</button>
+        </ul>
+
+    </div>
+    </div>
+    <router-outlet></router-outlet>
+

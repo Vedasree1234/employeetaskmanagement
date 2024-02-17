@@ -1,0 +1,41 @@
+.row
+{
+    width:100%;
+    height:60px;
+    background-color:lightblue;
+}
+ul{
+    display:flex;
+    justify-content:left;
+}
+a{
+    text-decoration:none;
+    color:black;
+    font-size:30px;
+   justify-content: space-evenly;
+   padding:45px;
+   text-emphasis-style: initial;
+  
+}
+
+button{
+    display:flex;
+    margin-left:450px;
+}
+.active{
+    color:blue;
+  
+    
+}
+a:hover{
+    color:red;
+}
+ul li
+{
+    list-style-type: none;
+    
+}
+
+
+
+

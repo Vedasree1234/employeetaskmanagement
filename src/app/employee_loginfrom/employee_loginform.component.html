@@ -1,0 +1,40 @@
+
+<div class="container mt-5">
+    <h1>Employee Login Form</h1>
+  <div class="login-container mt-3">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label ><i class="fa fa-envelope"></i> Emailid</label>
+            <input type="email"
+            [class.is-invalid]="emailid?.invalid && emailid?.touched"
+             formControlName="emailid" class="form-control">
+             <div *ngIf="emailid.invalid && emailid.touched ||submit && emailid?.invalid">
+                <small class="text-danger"*ngIf="emailid?.errors?.['required']">emailid is Required</small>
+                <small class="text-danger" *ngIf="emailid?.errors?.['email']">emailid is not valid</small>
+              </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label ><i class="fa fa-key"></i> password</label>
+            <input type="password" formControlName="password"  [class.is-invalid]="password?.invalid && password?.touched"class="form-control">
+            <div *ngIf="password.invalid && password.touched ||submit && password?.invalid">
+                <small class="text-danger"*ngIf="password?.errors?.['required']">password is Required</small>
+              </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Employee Login</button>
+        </div>
+        <div class="register-container mt-3">
+            <a routerLink="/register">New User? click here to Register</a>
+        </div>
+        <div class="adminlogin mt-3">
+            <a routerLink="/managerlogin"><button class="btn btn-primary" type="button">Manager Login</button></a>
+        </div>
+    </form>
+  
+
+</div>
+</div>
