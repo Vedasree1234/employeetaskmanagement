@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AutherizationService } from '../autherization.service';
-import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -15,7 +14,6 @@ export class EmployeeLoginComponent implements OnInit{
   loginForm: FormGroup;
   registrationSuccess=false;
   submitted=false;
-  checkemail:any
   get emailid()
   {
     return this.loginForm.get('emailid')
@@ -24,7 +22,7 @@ export class EmployeeLoginComponent implements OnInit{
   {
     return this.loginForm.get('password')
   }
-  constructor(private fb: FormBuilder,private route:Router,private ar:ActivatedRoute,private service:AutherizationService,private toaster:ToastrService) {
+  constructor(private fb: FormBuilder,private route:Router,private ar:ActivatedRoute,private service:AutherizationService) {
 
     // this.route.queryParams.subscribe((params )=> {
     //   this.registrationSuccess = params['success'] === 'true';
@@ -40,42 +38,25 @@ export class EmployeeLoginComponent implements OnInit{
    this.registrationSuccess=true;
   }
 submit=false;
-
   onSubmit() {
     this.submit=true;
     const{emailid,password}=this.loginForm.value;
-    if(this.loginForm.value)
-    {
-    this.service.getEmployeeByEmailid(emailid as string).subscribe(
+    this.service.getUserByEmail(emailid as string).subscribe(
       response=>{
-         this.checkemail=response;
-         if(this.checkemail.length==0)
-         {
-          this.toaster.warning("please provide valid credentials","Warning")
-         }
-         else{
-          const checkdesignation=this.checkemail[0].designation;
+
+        if(response[0].password===password)
+        {
           sessionStorage.setItem('emailid',emailid as string)
-          if(checkdesignation==='employee')
-          {
-           if(response[0].password===password)
-           {
-             this.toaster.success(" Employee Login successfull","Success")
-             this.route.navigate(['/employeedashboard'])
-           }
-          }
-         }
-
-
+          console.log(response)
+          this.route.navigate(['/employee'])
+        }
       }
       ,
       errors=>{
-        this.toaster.error("employee failed to login","Error")
+        console.log(errors)
       }
     )
 
   }
-
-}
 
 }

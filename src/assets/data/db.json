@@ -1,68 +1,961 @@
 {
-  "employees": [
+  "Users": [
     {
-      "id": 100,
+      "id": "a929",
       "username": "vedasree",
       "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "6487",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "9519",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "340c",
+      "username": "sdsadc",
+      "emailid": "wsdc@gmail.com",
+      "subscribe": false,
       "password": "vedasree",
-      "designation": "employee",
-      "city": "guntur",
-      "postalcode": "876567",
+      "address": {},
       "alternateEmails": []
     },
     {
-      "id": 101,
-      "username": "teja",
-      "emailid": "teja@gmail.com",
-      "password": "teja@12345",
-      "designation": "employee",
-      "city": "vijayawada",
-      "postalcode": "876567",
+      "id": "74b8",
+      "username": "sdsadc",
+      "emailid": "wsdc@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
       "alternateEmails": []
     },
     {
-      "id": 100,
-      "username": "pallavi",
-      "emailid": "pallavi@gmail.com",
-      "password": "pallavi@12345",
-      "designation": "employee",
-      "city": "hyderabad",
-      "postalcode": "123456",
+      "id": "2837",
+      "username": "hgfcgvfc",
+      "emailid": "jhgf@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "3011",
+      "username": "bijivemula chandra prakash reddy",
+      "emailid": "chandra@gmail.com",
+      "subscribe": true,
+      "password": "chandra@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "d41d",
+      "username": "",
+      "emailid": "",
+      "subscribe": false,
+      "password": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "bffd",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "3b84",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "fcf9",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "9ba5",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "75dd",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "3551",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "72c3",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "f477",
+      "username": "vedasree",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree@1234",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "c539",
+      "username": "",
+      "emailid": "",
+      "subscribe": false,
+      "password": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "a0e3",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "fd76",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "7682",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "2091",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "cb49",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "df4a",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "021b",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "45a8",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "0f3e",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "ad72",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "ec01",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "85c2",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "a96b",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "3c28",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "1618",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "95d1",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "c892",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "1619",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "11ee",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "7454",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "2495",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "2ff3",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "5023",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "f21a",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "fb6a",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "8ee9",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "e5a9",
+      "username": "qaswadsdf",
+      "emailid": "sd@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "4b59",
+      "username": "qwefr",
+      "emailid": "wef@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "1202",
+      "username": "qwefr",
+      "emailid": "wef@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "4dc5",
+      "username": "qwefr",
+      "emailid": "wef@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "a7c7",
+      "username": "QWF",
+      "emailid": "defg@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "a4a5",
+      "username": "",
+      "emailid": "",
+      "subscribe": false,
+      "password": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "866b",
+      "username": "aqsd",
+      "emailid": "swadf@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "9210",
+      "username": "qswdf",
+      "emailid": "saad@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "8746",
+      "username": "angel",
+      "emailid": "angel@gmail.com",
+      "subscribe": false,
+      "password": "angel@123",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "ca0f",
+      "username": "3edws",
+      "emailid": "edc@gmail.com",
+      "subscribe": false,
+      "password": "12345678",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "fcf8",
+      "username": "mom",
+      "emailid": "mom@gmail.com",
+      "subscribe": false,
+      "password": "mom@123456",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "de19",
+      "username": "",
+      "emailid": "",
+      "subscribe": false,
+      "password": "",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "1652",
+      "username": "",
+      "emailid": "",
+      "subscribe": false,
+      "password": "",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "2502",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "76a9",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "b43b",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "9226",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "5ba8",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "9df2",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "e5c5",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "7a5c",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "5bdf",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "c45b",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "506d",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "5574",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "6b52",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "cec1",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "0e89",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "de07",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "ed7c",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "9d7a",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "13aa",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "468e",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "16ab",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "1a39",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "7532",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "2481",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "04fe",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "e995",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "511d",
+      "username": "veda",
+      "emailid": "veda@gmail.com",
+      "subscribe": true,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "789f",
+      "username": "lisa",
+      "emailid": "lisa@gmail.com",
+      "subscribe": false,
+      "password": "lisa@12345",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "f890",
+      "username": "hgfdxs",
+      "emailid": "hjuygtf@gmail.com",
+      "subscribe": false,
+      "password": "jungkookandv",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "03a3",
+      "username": "",
+      "emailid": "",
+      "subscribe": false,
+      "password": "",
+      "userType": "",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "e515",
+      "username": "fghjk",
+      "emailid": "fghjk@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "5903",
+      "username": "hgfc",
+      "emailid": "hbgvfc@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "c73d",
+      "username": "njuhgy",
+      "emailid": "tgh@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "4b29",
+      "username": "cfgvbhn",
+      "emailid": "cfvbn@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "d458",
+      "username": "njhbgvf",
+      "emailid": "hgvf@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "879f",
+      "username": "hgf",
+      "emailid": "juyhtg@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "4b63",
+      "username": "hgf",
+      "emailid": "juyhtg@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "b60a",
+      "username": "swdf",
+      "emailid": "qawsdf@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "f8fd",
+      "username": "ngbh",
+      "emailid": "ghbnjm@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "29b2",
+      "username": "fgb",
+      "emailid": "gdf@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "362e",
+      "username": "heqwdfb ",
+      "emailid": "qwwsd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "0b9c",
+      "username": "fcgvb",
+      "emailid": "fgh@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "5f23",
+      "username": "fvgbhn",
+      "emailid": "nbhgvfcd@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "900c",
+      "username": "gvfcvb",
+      "emailid": "jnhbgvf@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "manager",
+      "address": {},
+      "alternateEmails": []
+    },
+    {
+      "id": "3f02",
+      "username": "jbhgvf",
+      "emailid": "vnv@gmail.com",
+      "subscribe": false,
+      "password": "vedasree",
+      "userType": "employee",
+      "address": {},
       "alternateEmails": []
     }
   ],
-  "managers": [
-    {
-      "id": 200,
-      "username": "jimin",
-      "emailid": "jimin@gmail.com",
-      "password": "jimin@12345",
-      "designation": "manager",
-      "city": "seoul",
-      "postalcode": "234566",
-      "alternateEmails": []
-    },
-    {
-      "id": 201,
-      "username": "jkkk",
-      "emailid": "jkkk@gmail.com",
-      "password": "jk@123456",
-      "designation": "manager",
-      "city": "seoul",
-      "postalcode": "876755",
-      "alternateEmails": []
-    }
-  ],
-  "tasks": [
-
-    {
-      "id": "3180",
-      "taskid": 2,
-      "title": "attend the meeting",
-      "description": "attend the meeting at 2'0 clock",
-      "duedate": "2024-02-20",
-      "priority": "medium",
-      "assignto": "pallavi"
-    }
-  ]
+  "Admin": []
 }

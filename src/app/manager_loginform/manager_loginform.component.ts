@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AutherizationService } from '../autherization.service';
-import { ToastrService } from 'ngx-toastr';
-import { emitWarning } from 'process';
 
 
 @Component({
@@ -15,21 +13,21 @@ export class ManagerLoginComponent {
   ManagerloginForm: FormGroup;
   registrationSuccess=false;
   submitted=false;
-  get emailid()
+  get empId()
   {
-    return this.ManagerloginForm.get('emailid')
+    return this.ManagerloginForm.get('empId')
   }
   get password()
   {
     return this.ManagerloginForm.get('password')
   }
-  constructor(private fb: FormBuilder,private route:Router,private ar:ActivatedRoute,private service:AutherizationService,private toster:ToastrService) {
+  constructor(private fb: FormBuilder,private route:Router,private ar:ActivatedRoute,private service:AutherizationService) {
 
     // this.route.queryParams.subscribe((params )=> {
     //   this.registrationSuccess = params['success'] === 'true';
     //  });
     this.ManagerloginForm = this.fb.group({
-      emailid: ['', [Validators.required,Validators.email]],
+      empId: ['', [Validators.required,Validators.email]],
       password:['',[Validators.required]]
 
     });
@@ -39,31 +37,25 @@ export class ManagerLoginComponent {
    this.registrationSuccess=true;
   }
 submit=false;
-array:any
   onSubmit() {
     this.submit=true;
-    const{emailid,password}=this.ManagerloginForm.value;
-    sessionStorage.setItem('emailid',emailid as string),
-    this.service.getManagerByEmailid(emailid as string).subscribe(
-      response=>{
-        this.array=response
-        if(this.array.length ===0)
-        {
-          this.toster.warning("please provide valid credentials","Warning")
+    // const{empId,password}=this.ManagerloginForm.value;
+    // this.service. getManagerByEmpId(empId as string).subscribe(
+    //   response=>{
 
-        }
-
-        if(response[0].password===password)
-        {
-          this.toster.success("Manager Login successfull","Success")
-          this.route.navigate(['/managerdashboard'])
-        }
-      }
-      ,
-      errors=>{
-        this.toster.error("Manager failed to login","Error")
-      }
-    )
+    //     if(response[0].password===password)
+    //     {
+    //       sessionStorage.setItem('empId',empId as string)
+    //       console.log(response)
+    //       this.route.navigate(['/addtask'])
+    //     }
+    //   }
+    //   ,
+    //   errors=>{
+    //     console.log(errors)
+    //   }
+    // )
+   
 
   }
 

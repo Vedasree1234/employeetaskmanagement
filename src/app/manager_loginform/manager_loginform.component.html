@@ -9,11 +9,11 @@
         <div class="form-group">
             <label ><i class="fa fa-circle-user"></i>Manager emailid</label>
             <input type="text"
-            [class.is-invalid]="emailid?.invalid && emailid?.touched"
-             formControlName="emailid" class="form-control">
-             <div *ngIf="emailid.invalid && emailid.touched ||submit && emailid?.invalid">
-                <small class="text-danger"*ngIf="emailid?.errors?.['required']">emailid is Required</small>
-                <small class="text-danger"*ngIf="emailid?.errors?.['email']">emailid is not valid</small>
+            [class.is-invalid]="empId?.invalid && empId?.touched"
+             formControlName="empId" class="form-control">
+             <div *ngIf="empId.invalid && empId.touched ||submit && empId?.invalid">
+                <small class="text-danger"*ngIf="empId?.errors?.['required']">emailid is Required</small>
+                <small class="text-danger"*ngIf="empId?.errors?.['email']">emailid is not valid</small>
 
               </div>
         </div>
@@ -32,4 +32,3 @@
     </form>
 </div>
 </div>
-<router-outlet></router-outlet>

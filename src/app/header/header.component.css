@@ -15,17 +15,17 @@ a{
    justify-content: space-evenly;
    padding:45px;
    text-emphasis-style: initial;
-
+  
 }
 
 button{
     display:flex;
-    margin-left:auto;
+    margin-left:450px;
 }
 .active{
     color:blue;
-
-
+  
+    
 }
 a:hover{
     color:red;
@@ -33,7 +33,7 @@ a:hover{
 ul li
 {
     list-style-type: none;
-    margin-top:auto
+    
 }
 
 
