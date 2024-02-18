@@ -3,22 +3,56 @@ import { Injectable } from '@angular/core';
 import { User } from './user';
 import { Router } from '@angular/router';
 import { Admin } from './admin';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutherizationService {
-  url1 = "http://localhost:3000"
-  url2="http://localhost:3000"
+  url= "http://localhost:3000"
+  private employee=100
+  private manager=200
+  getEmployeeId()
+  {
+    return this.employee++;
+  }
+  getManagerId()
+  {
+     return this.manager++;
+  }
   constructor(private http: HttpClient,private route:Router) {
   }
-  registerUser(userdetails: User) 
+  registerEmployee(employeedetail:any)
   {
-    return this.http.post(`${this.url1}/Users`,userdetails);
+    return this.http.post(`${this.url}/employees`,employeedetail)
   }
-  getUserByEmail(email:string)
+  registerManager(managerdetails:any)
   {
-    return this.http.get(`${this.url1}/Users?emailid=${email}`)
+    return this.http.post(`${this.url}/managers`,managerdetails)
+  }
+  getEmployeeByEmailid(email:string)
+  {
+    return this.http.get(`${this.url}/employees?emailid=${email}`)
+  }
+  getManagerByEmailid(email:string)
+  {
+    return this.http.get(`${this.url}/managers?emailid=${email}`)
+  }
+  getAllEmployees()
+  {
+    return this.http.get(`${this.url}/employees`)
+  }
+  getAllManagers()
+  {
+    return this.http.get(`${this.url}/managers`)
+  }
+  assignTask(taskdetails:any):Observable<any>
+  {
+    return this.http.post(`${this.url}/tasks`,taskdetails)
+  }
+  getAllTasks()
+  {
+    return this.http.get(`${this.url}/tasks`)
   }
   // registerManager(managerdetails:Admin)
   // {

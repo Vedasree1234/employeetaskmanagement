@@ -1,0 +1,21 @@
+<app-manager-dashboard></app-manager-dashboard>
+
+  <div class="list-group mt-3" style="align-items: center;">
+    <h3 *ngIf="tasks">Total Number Of Assigned Tasks :{{tasks.length}}</h3>
+    <button type="button" (click)="openPopup(t)"class="list-group-item list-group-item-action" style="width:300px;background-color:rgb(237, 224, 207);text-align:center" *ngFor="let t of tasks">
+     {{t.title}}
+    </button>
+  </div>
+  <ng-template #modelTemplate let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">{{selectedTask?.title}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <!-- Add additional details or content for the modal body here -->
+      <p>{{selectedTask?.description}}</p>
+    </div>
+  </ng-template>
+

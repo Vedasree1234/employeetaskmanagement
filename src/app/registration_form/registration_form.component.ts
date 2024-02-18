@@ -6,6 +6,7 @@ import { passwordValidator } from '../passwordvalidation/password.validator';
 import { AutherizationService } from '../autherization.service';
 import { User } from '../user';
 import { ToastrService } from 'ngx-toastr';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -13,14 +14,9 @@ import { ToastrService } from 'ngx-toastr';
   styleUrl: './registration_form.component.css'
 })
 export class RegistrationFormComponent {
-  constructor(private fb: FormBuilder, private route: Router, private auth: AutherizationService,private toster:ToastrService) {
-
-  }
-
-
-  registrationForm: FormGroup|any;
+  constructor(private fb: FormBuilder, private route: Router, private auth: AutherizationService, private toster: ToastrService, private http: HttpClient) {}
+  registrationForm: FormGroup | any;
   submitted = false;
-
   get addressPostalCode() {
     return this.registrationForm.get('address.postalcode');
   }
@@ -47,16 +43,8 @@ export class RegistrationFormComponent {
   }
 
   states = [
-    {
-      'id': 1,
-      'name': "AndhraPradesh",
-      'code': 'AP'
-    },
-    {
-      'id': 2,
-      'name': "Tamilnadu",
-      'code': 'TN'
-    },
+    {'id': 1,'name': "AndhraPradesh",'code': 'AP'},
+    {'id': 2,'name': "Tamilnadu",'code': 'TN'},
     {
       'id': 3,
       'name': "Karnataka",
@@ -154,10 +142,10 @@ export class RegistrationFormComponent {
       subscribe: [false],
       password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', [Validators.required]],
-      userType: ['', [Validators.required]],
+      designation: ['', [Validators.required]],
       address: this.fb.group({
         city: ['', [Validators.required]],
-        postalcode: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]]
+        postalcode: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]],
       }), alternateEmails: this.fb.array([]),
 
     }, { validators: passwordValidator });
@@ -177,33 +165,66 @@ export class RegistrationFormComponent {
 
   onSubmit() {
     this.submitted = true;
-    console.log(this.registrationForm.value)
-    const postdata = { ...this.registrationForm.value }
-    delete postdata.confirmPassword,
-      delete postdata.address.city,
-      delete postdata.address.state,
-      delete postdata.address.postalcode
-    this.auth.registerUser(postdata as User).subscribe(
-      response => {
-        if (this.registrationForm.valid) {
-          console.log(response)
-          console.log(postdata.userType)
-          if (postdata.userType === "employee") {
-            this.route.navigate(['/employeelogin'])
-            this.toster.success("employee registered successfully","success")
-          }
-          else if (postdata.userType === "manager") {
-            this.route.navigate(['/managerlogin'])
-            this.toster.success("manager registered successfully","success")
-          }
-        }
-      },
-      errors => {
+    const formData=this.registrationForm.value;
+    const id=formData.designation==='employee'?this.auth.getEmployeeId():this.auth.getManagerId()
+    const registrationdata={
+      id:id,
+      username:formData.username,
+      emailid:formData.emailid,
+      password:formData.password,
+      designation:formData.designation,
+      city:formData.address.city,
+      postalcode:formData.address.postalcode,
+     alternateEmails:formData.alternateEmails
+    }
+    if (formData.designation === 'employee') {
 
+      this.auth.registerEmployee(registrationdata).subscribe((data)=>{
+        this.toster.success("employee registered successfully","success")
+        this.route.navigate(['/employeelogin'])
+      },
+      error=>{
         this.toster.error("failed to register","major error")
       }
-    )
+      )
 
+    }
+    else if (formData.designation !== 'employee') {
+      this.auth.registerManager(registrationdata).subscribe((data)=>{
+        this.toster.success("manager registered successfully","success")
+        this.route.navigate(['/managerlogin'])
+      },
+      error=>{
+        this.toster.error("failed to register","major error")
+      }
+      )
+    }
+
+    // console.log(this.registrationForm.value)
+    // const postdata = { ...this.registrationForm.value }
+    // delete postdata.confirmPassword,
+    //   delete postdata.address.city,
+    //   delete postdata.address.state,
+    //   delete postdata.address.postalcode
+    // this.auth.registerUser(postdata as User).subscribe(
+    //   response => {
+    //     if (this.registrationForm.valid) {
+    //       console.log(response)
+    //       console.log(postdata.userType)
+    //       if (postdata.userType === "employee") {
+    //         this.route.navigate(['/employeelogin'])
+    //         this.toster.success("employee registered successfully","success")
+    //       }
+    //       else if (postdata.userType === "manager") {
+    //         this.route.navigate(['/managerlogin'])
+    //         this.toster.success("manager registered successfully","success")
+    //       }
+    //     }
+    //   },
+    //   errors => {
+    //     this.toster.error("failed to register","major error")
+    //   }
+    // )
 
   }
   reset() {
@@ -240,10 +261,10 @@ export class RegistrationFormComponent {
   Loadapidata() {
     this.registrationForm.setValue({
       username: 'test',
-      emailid:'test@gmail.com',
-      subscribe:false,
+      emailid: 'test@gmail.com',
+      subscribe: false,
       password: 'test',
-      userType:'employee',
+      userType: 'employee',
       confirmPassword: 'test',
       address: {
         city: 'city',
@@ -251,8 +272,7 @@ export class RegistrationFormComponent {
         postalcode: '1234'
       }
     })
-   }
   }
-// }
+}
 
 

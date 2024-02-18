@@ -24,7 +24,7 @@ export class HeaderComponent {
 
   onOptionSelected() {
     this.selectedOption=this.selectedOption?'':'open'
-   
+
   }
   selectOption(option: string) {
     // Handle the selection of a dropdown option

@@ -95,14 +95,25 @@
       <div class="form-group">
         <div class="drop-down">
           <select (change)="updatedistricts($event)">
-            <option selected>select state</option>
+            <option selected [disabled]=true>select state</option>
             <option value="{{s.id}}" *ngFor="let s of states">{{s.name}}</option>
           </select>
           <select>
-            <option selected>select districts</option>
+            <option selected [disabled]=true>select districts</option>
             <option value="{{f.id}}" *ngFor="let f of filtereddistricts">{{f.name}}</option>
           </select>
         </div>
+
+        <!-- <div class="dropdown">
+          <button class="dropdown-toggle"  style="background-color:white" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>-->
       </div>
       <br>
       <div class="form-group">
@@ -124,9 +135,9 @@
       <div class="form-group mt-2">
         <label><i class="fa fa-user-tie"></i> Designation</label>
         <br>
-        <input type="radio" formControlName="userType" name="userType" value="employee"> Employee
+        <input type="radio" formControlName="designation" name="designation" value="employee"> Employee
         <br>
-        <input type="radio" formControlName="userType" name="userType" value="manager"> Manager
+        <input type="radio" formControlName="designation" name="designation" value="manager"> Manager
       </div>
 
 
@@ -135,6 +146,7 @@
       <button  (click)="Loadapidata()" class="btn btn-primary ml-5">LoadApiData</button>
       <button class="btn btn-warning" type="button" (click)="reset()">Reset</button>
     </div>
-
+    <br>
+Already Registered?<a routerLink="/employeelogin">EmployeeLogin</a>
   </form>
 </div>

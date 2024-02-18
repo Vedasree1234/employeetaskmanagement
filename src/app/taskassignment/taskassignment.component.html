@@ -1,0 +1,41 @@
+<app-manager-dashboard></app-manager-dashboard>
+<div class="container" >
+
+  <h1 class="text-center">Add Task</h1>
+  <form [formGroup]="taskassign" (ngSubmit)="assigntask()">
+      <!--<div class="text-center">-->
+          <div>
+              <label for="title">Task Id:</label>
+              <input type="number" id="title" formControlName="taskid" class="form-control">
+          </div>
+          <div>
+              <label for="title">Title:</label>
+              <input type="text" id="title" formControlName="title" class="form-control">
+          </div>
+          <div>
+              <label for="description">Description:</label>
+              <textarea id="description" formControlName="description" class="form-control"></textarea>
+          </div>
+          <div>
+              <label for="due-date">Due Date:</label>
+              <input type="date" id="due-date" formControlName="duedate" class="form-control">
+          </div>
+          <div>
+              <label for="priority">Priority:</label>
+              <select id="priority" formControlName="priority" class="form-control">
+                 <option selected [disabled]=true>please select priority</option>
+                 <option *ngFor="let p of priority">{{p}}</option>
+              </select>
+          </div>
+          <div>
+              <label for="title">Assigning To:</label>
+              <select formControlName="assignto" class="form-control">
+                  <option selected [disabled]=true>select employee</option>
+                  <option *ngFor="let emp of employeelist">{{emp.username}}</option>
+              </select>
+          </div>
+      <div class="button-container">
+          <button class="btn btn-primary mt-4 m-4" type="submit">Assign</button>
+      </div>
+  </form>
+</div>
